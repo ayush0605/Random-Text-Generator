@@ -1,6 +1,6 @@
 
 /**
- * Write a description of interface IMarkovModel here.
+ * Description of interface IMarkovModel here.
  * 
  * @author (Ayush Singhal) 
  * @version (1.0)
