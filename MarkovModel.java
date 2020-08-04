@@ -19,7 +19,7 @@ public class MarkovModel extends AbstractMarkovModel {
         if(myText == null){
             return "";
         }
-        StringBuilder sb = new StringBuilder();
+        StringBuffer sb = new StringBuffer();
         int index = myRandom.nextInt(myText.length()-myOrder);
         String key = myText.substring(index,index+myOrder);
         sb.append(key);
