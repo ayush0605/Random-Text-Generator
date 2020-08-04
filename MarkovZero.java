@@ -13,7 +13,7 @@ public class MarkovZero extends AbstractMarkovModel {
         if( myText == null){
             return "";
         }
-        StringBuilder sb = new StringBuilder();
+        StringBuffer sb = new StringBuffer();
         for(int i=0; i<numChars; i++){
             int index = myRandom.nextInt(myText.length());
             sb.append(myText.charAt(index));
