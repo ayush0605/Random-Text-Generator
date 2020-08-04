@@ -34,17 +34,31 @@ public class MarkovRunnerWithInterface {
 		st = st.replace('\n', ' ');
 		int size = 200;
 		int seed = 42;
+		int order = 4;
         MarkovZero mz = new MarkovZero();
         runModel(mz, st, size,seed);
     
         MarkovOne mOne = new MarkovOne();
         runModel(mOne, st, size,seed);
         
-        MarkovModel mThree = new MarkovModel(6);
-        runModel(mThree, st, size, seed);
+        long startTimeNormal = System.nanoTime();
         
-        //MarkovFour mFour = new MarkovFour();
-        //runModel(mFour, st, size);
+        MarkovModel mm = new MarkovModel(order);
+        runModel(mm, st, size, seed);
+        
+        long endTimeNormal = System.nanoTime();
+        long diffNormal = endTimeNormal - startTimeNormal;
+        System.out.println("Normal Model " + diffNormal);
+        
+        long startTimeEfficient = System.nanoTime();
+        
+        EfficientMarkovModel emm = new EfficientMarkovModel(order);
+        runModel(emm, st, size, seed);
+        
+        long endTimeEfficient = System.nanoTime();
+        long diffEfficient = endTimeEfficient - startTimeEfficient;
+        System.out.println("Efficient Model " + diffEfficient);
+        System.out.println("Efficient Model is " + diffNormal*1.0/diffEfficient + " times faster than Normal");
 
     }
 
