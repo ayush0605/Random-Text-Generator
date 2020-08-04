@@ -20,6 +20,9 @@ public abstract class AbstractMarkovModel implements IMarkovModel {
         myText = s.trim();
     }
     
+    public void setRandom(int seed){
+        myRandom = new Random(seed);
+    }
     //Method to generate Random Text
     // It is a abstract method. Must be defined in all classes extending this class
     abstract public String getRandomText(int numChars);
