@@ -12,7 +12,7 @@ public class MarkovOne extends AbstractMarkovModel {
         if(myText == null){
             return "";
         }
-        StringBuilder sb = new StringBuilder();
+        StringBuffer sb = new StringBuffer();
         int index = myRandom.nextInt(myText.length()-1);
         String key = myText.substring(index, index+1);
         sb.append(key);
