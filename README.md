@@ -1,5 +1,5 @@
 # Random-Text-Generator
-In this project I have used Markov Model to generate random text.
+In this project, the Markov Model is used to generate random text.
 
 Markov Text Generation can be used for generating and recognizing text. It uses statistical and probabilistic models. Markov model can be of any order. Order means the number of characters chosen at random to predict the next.
 
